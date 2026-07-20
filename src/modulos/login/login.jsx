@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './login.css'
 
 function Login() {
+    const navigate = useNavigate()
     const [formData, setFormData] = useState({
         nombre: '',
         clave: ''
@@ -41,9 +43,15 @@ function Login() {
             const data = await response.json()
 
             console.log('Login exitoso:', data)
-            // Manejar token o redirección aquí
+
+            // Guardar sesión completa en sessionStorage (token + usuario con rol y menus)
+            sessionStorage.setItem('authData', JSON.stringify(data))
+
+
+            navigate('/', { replace: true })
 
         } catch (err) {
+            console.error(err)
             setError(err.message || 'Error de conexión con el servidor')
         } finally {
             setLoading(false)

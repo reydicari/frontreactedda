@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        
+
         {/* Main Menu layout wrapping other routes */}
         <Route path="/" element={<MainMenu />}>
           <Route index element={<Navigate to="/usuarios" replace />} />

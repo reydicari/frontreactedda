@@ -118,6 +118,14 @@
     opacity: 0.8;
 }
 
+.nav-empty {
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+    padding: 24px 12px;
+    font-style: italic;
+}
+
 .logout-btn {
     margin: 24px 16px;
     padding: 14px 18px;
