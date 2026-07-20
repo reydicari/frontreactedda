@@ -205,7 +205,6 @@ function Usuarios() {
             <thead>
               <tr>
                 <th>Usuario</th>
-                <th style={{ minWidth: '250px' }}>Persona</th>
                 <th>Rol</th>
                 <th>Estado</th>
                 <th>Último Acceso</th>
@@ -223,7 +222,6 @@ function Usuarios() {
                       <span className="username">{rol.nombre}</span>
                     </div>
                   </td>
-                  <td className="person-name">{rol.nombrePersona}</td>
                   <td>
                     <span className={`role-badge ${rol.rol.toLowerCase()}`}>
                       {rol.rol}
