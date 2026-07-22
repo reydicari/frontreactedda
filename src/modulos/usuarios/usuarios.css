@@ -279,12 +279,19 @@ input:checked + .switch-slider:before {
     gap: 12px;
     padding: 16px 24px;
     border-radius: var(--radius-md);
-    margin-bottom: 24px;
     font-size: 14px;
     font-weight: 600;
     animation: slideDown 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     box-shadow: var(--shadow-soft);
+
+    /* 👇 lo nuevo para flotante */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* asegura que quede encima */
+    background: #fff; /* o el color que prefieras */
 }
+
 
 .notification.success {
     background: #ecfdf5;
